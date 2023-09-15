@@ -222,6 +222,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Viewpoint Neural Textual Inversion (ViewNeTI) for novel view synthesis</h2>
+    <div class="content">
       <img src="./static/images/system_figure.png"
                  class=""
                  alt="ViewNeTI system figure."/>
@@ -231,6 +232,10 @@
     <p>
       $S_{\mathbf{R}_i}$ and $S_o$ each have a small neural mapper, $&#x2133;_v$ and $&#x2133;_o$ (red in the figure), that predicts a point in the text space of the frozen CLIP text encoder. That text encoding then conditions the diffusion model to make an image of the object $S_o$ in pose $R_i$.
     </p>
+    </p>
+    Our experiments do novel view synthesis with a frozen <a href="https://huggingface.co/stabilityai/stable-diffusion-2-1">Stable Diffusion 2.1</a> model on the <a href="https://roboimagedata.compute.dtu.dk/?page_id=36">DTU multiview dataset</a>.
+    <p>
+    </div>
   </div>
 </section>
 <!-- System. -->
