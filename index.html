@@ -8,7 +8,7 @@
         content="">
   <meta name="keywords" content="ViewNeTI, diffusion, textual inversion">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Viewpoint Textual Inversion: Unleashing Novel View Synthesis with Pretrained 2D Diffusion Models</title>
+  <title>Viewpoint Textual Inversion: Discovering Scene Representations and 3D View Control in 2D Diffusion Models</title>
 
   
   <!-- Google tag (gtag.js) -->
@@ -46,46 +46,8 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</nav>
- -->
 
 <section class="hero">
   <div class="hero-body">
@@ -93,61 +55,6 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Viewpoint Textual Inversion: Unleashing Novel View Synthesis with Pretrained 2D Diffusion Models</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://jmhb0.github.io/">James Burgess</a>,</span>
-            <span class="author-block">
-              <a href="https://wangkua1.github.io/">Kuan-Chieh (Jackson) Wang</a>,</span>
-            <span class="author-block">
-              <a href="https://ai.stanford.edu/~syyeung/">Serena Yeung</a>
-            </span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Stanford University</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://web.stanford.edu/~jmhb/files/viewneti/viewneti-paper-highres.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://web.stanford.edu/~jmhb/files/viewneti/viewneti-paper-highres.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper (high-res)</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2309.07986"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/jmhb0/view_neti"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-            </div>
-
           </div>
         </div>
       </div>
@@ -159,210 +66,12 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        Image diffusion models encode 3D world knowledge in their latent space, which our method - ViewNeTI - leverages to do novel view synthesis from few input views.
+        Redirecting .... If stuck on this page, go to <a href="https://jmhb0.github.io/view_neti/">https://jmhb0.github.io/view_neti/</a>
       </h2>
-      <img src="./static/images/pull_fig.png"
-                 class=""
-                 alt="ViewNeTI pull figure and sample novel view synthesis results."/>
-      
     </div>
   </div>
 </section>
 
-
-<!--/ Abstract. -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Text-to-image diffusion models understand spatial relationship between objects, but do they represent the true 3D structure of the world from only 2D supervision? We demonstrate that yes, 3D knowledge is encoded in 2D image diffusion models like Stable Diffusion, and we show that this structure can be exploited for 3D vision tasks. Our method, Viewpoint Neural Textual Inversion (ViewNeTI), controls the 3D viewpoint of objects in generated images from frozen diffusion models. We train a small neural mapper to take camera viewpoint parameters and predict text encoder latents; the latents then condition the diffusion generation process to produce images with the desired camera viewpoint. 
-          </p>
-          <p>
-            ViewNeTI naturally addresses Novel View Synthesis (NVS). By leveraging the frozen diffusion model as a prior, we can solve NVS with very few input views; we can even do single-view novel view synthesis. Our single-view NVS predictions have good semantic details and photorealism compared to prior methods. Our approach is well suited for modeling the uncertainty inherent in sparse 3D vision problems because it can efficiently generate diverse samples. Our view-control mechanism is general, and can even change the camera view in images generated by user-defined prompts. 
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-<!-- 3D understanding. -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <!-- col 1 the text -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">3D Understanding in Diffusion Models</h2>
-          <p>
-            Text-to-image diffusion models are only trained on unposed 2D image data, yet they seem able to do 3D reasoning. Here, we ask a <a href="https://huggingface.co/stabilityai/stable-diffusion-2-inpainting">Stable Diffusion</a> model to infill the background around a car, and find that it generates 3D-consistent shadows and reflections. 
-          </p>
-          <p>
-            This motivates us to use frozen diffusion models for novel view synthesis (NVS).
-          </p>
-        </div>
-      </div>
-      <!-- col 2 - the fig -->
-      <div class="column">
-        <h2 class="title is-3"></h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <img src="./static/images/infilling.png"
-                 alt="Infilling StableDiffusion example"/>
-          </div>
-
-        </div>
-      </div>
-    </div>
-<!-- 3D understanding. -->
-
-<!-- System. -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Viewpoint Neural Textual Inversion (ViewNeTI) for novel view synthesis</h2>
-    <div class="content">
-      <img src="./static/images/system_figure.png"
-                 class=""
-                 alt="ViewNeTI system figure."/>
-    <p>
-      We adapt <a href="https://textual-inversion.github.io/">Textual inversion</a> to do novel view synthesis. Given a multi-view dataset, we generate captions, "$S_{\mathbf{R}_i}$. A photo of a $S_{o}$". Here, "$S_{\mathbf{R}_i}$" is a token for camera view $\mathbf{R}_i$ and $S_o$ is a token for the object (like in standard textual inversion).
-    </p>
-    <p>
-      $S_{\mathbf{R}_i}$ and $S_o$ each have a small neural mapper, $&#x2133;_v$ and $&#x2133;_o$ (red in the figure), that predicts a point in the text space of the frozen CLIP text encoder. That text encoding then conditions the diffusion model to make an image of the object $S_o$ in pose $R_i$.
-    </p>
-    </p>
-    Our experiments do novel view synthesis with a frozen <a href="https://huggingface.co/stabilityai/stable-diffusion-2-1">Stable Diffusion 2.1</a> model on the <a href="https://roboimagedata.compute.dtu.dk/?page_id=36">DTU multiview dataset</a>.
-    <p>
-    </div>
-  </div>
-</section>
-<!-- System. -->
-
-<!-- Single-scene NVS -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <!-- col 1 the text -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Novel View Synthesis Optimized on One Scene</h2>
-          <p>
-            We can train ViewNeTI's neural mappers, $&#x2133;_v$ and $&#x2133;_o$, on a single scene. Here, there are six input views (the blue markers). We can generate novel <em>interpolated</em> views (the green markers), but we cannot generate novel <em>extrapolated</em> views (the red markers). 
-          </p>
-          <p>
-            To do extrapolation, we pretrain $&#x2133;_v$ on a small multi-view dataset (<100 scenes). The pretraining dataset has different classes to our test scenes.
-          </p>
-        </div>
-      </div>
-      <!-- col 2 - the fig -->
-      <div class="column">
-        <h2 class="title is-3"></h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <img src="./static/images/single-scene-nvs.png"
-                 alt="Single scene novel view synthesis"/>
-          </div>
-
-        </div>
-      </div>
-    </div>
-<!-- Single-scene NVS -->
-
-<!-- Basleines -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Single-view novel view synthesis</h2>
-    <div class="content">
-    <p>
-      We do novel-view synthesis from one input view by taking the pretrained $&#x2133;_v$ and training a new object mapper, $&#x2133;_o$.  Compared to NeRF-based baselines, ViewNeTI generations are photorealistic, have good semantic details, and generate reasonable completions under ambiguity.
-    </p>
-      <img src="./static/images/results_baselines.png"
-                 class=""
-                 alt="Baseline results comparisons."/>
-  </div>
-  </div>
-</section>
-<!-- Baselines -->
-
-
-<!-- Text-to-image -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <!-- col 1 the text -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">View-control in text-to-image generation</h2>
-          <p>
-            We can take the pretrained view mapper, $&#x2133;_v$, and add its view control token to novel text prompts. This enables controlling the 3D viewpoint in text-to-image content creation.
-          </p>
-        </div>
-      </div>
-      <!-- col 2 - the fig -->
-      <div class="column">
-        <h2 class="title is-3"></h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <img src="./static/images/t2i.png"
-                 alt="View controllable text generation"/>
-          </div>
-
-        </div>
-      </div>
-    </div>
-<!-- Text-to-image -->
-
-
-<!-- Concurrent Work. -->
-<div class="columns is-centered">
-  <div class="column is-full-width">
-    <h2 class="title is-3">Related Links</h2>
-
-
-
-    <div class="content has-text-justified">
-      <p>
-      <a href="https://sites.google.com/view/dreamsparse-webpage">DreamSparse</a> is a concurrent work for novel view synthesis from 2+ views. Like us, they learn to condition a frozen diffusion model, which allows them to utilize the prior knowledge from the massive pretraining dataset. 
-      </p>
-      <p>
-      Our work uses <a href="https://textual-inversion.github.io/">textual inversion</a> that was developed for diffusion model personalization, but we adapt it to 3D novel view synthesis. We use ideas and code from the recent <a href="https://neuraltextualinversion.github.io/NeTI/">Neural Textual Inversion (NeTI)</a> model.
-      </p>
-    </div>
-  </div>
-</div>
-</section>
-<!--/ Concurrent Work. -->
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{burgess2023viewneti,
-  author    = {Burgess, James and Wang, Kuan-Chieh and Yeung, Serena},
-  title     = {Viewpoint Textual Inversion: Unleashing Novel View Synthesis with Pretrained 2D Diffusion Models},
-  journal={arXiv preprint arXiv:2309.07986},
-  year      = {2023},
-}</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-          The template for this page is borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.  If you reuse their <a href="https://github.com/nerfies/nerfies.github.io">code</a>, please link to their site.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 </body>
 </html>
